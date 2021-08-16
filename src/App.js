@@ -1,17 +1,25 @@
 import { useQuery } from "@apollo/client";
+import { useState } from "react";
 import "./App.css";
 import {CharacterCard} from "./CharacterCard"
 import { GET_CHARACTERS } from "./GraphQL";
+import { SearchBox } from "./SearchBox";
 
 function App() {
   const { loading, error, data } = useQuery(GET_CHARACTERS);
   console.log(data);
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className="App">
-      <h1>
+      <div className="app-title-container">
+      <h1 style={{margin: "auto"}}>
         Star Wars Characters 🚀
+        
       </h1>
-      <div className="character-container"> 
+      <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+      </div>
+      
+      <div className="character-card-container"> 
         {data ? data.allPeople.people.map((person) => 
             <CharacterCard 
               key={person.name}
