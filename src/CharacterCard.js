@@ -17,7 +17,7 @@ export function CharacterCard({name, gender, eyeColor, height, mass, species, ho
                     <VisibilityIcon />
                 </Grid>
                 <Grid item xs={5}>
-                    <Typography>Eye color: {eyeColor}</Typography>
+                    <Typography >Eye color: {eyeColor}</Typography>
                 </Grid>
             </Grid>
             <Grid container>
@@ -40,4 +40,12 @@ background-color: #346751;
 //#C84B31 is a nice color too
 padding: 15px;
 margin: 50px;
+
+.MuiSvgIcon-root{
+    vertical-align: middle;
+}
+.MuiTypography-root{
+    font-size: 20px;
+    vertical-align: middle;
+}
 `;
