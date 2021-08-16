@@ -3,15 +3,17 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-export function CharacterCard({name, gender, eyeColor, height, mass, species, homeworld}) {
+export function CharacterCard({name, gender, birthYear, eyeColor, hairColor, height, mass, species, homeworld}) {
     return (
         <CharacterCardStyles>
             <header>
                 {name}
             </header>
             <p>Gender: {gender}</p>
+            <p>Birth year: {birthYear}</p>
             <p>Species: {species}</p>
             <p>Homeworld: {homeworld}</p>
+            <p>Hair color: {hairColor}</p>
             <Grid container>
                 <Grid item xs={1}>
                     <VisibilityIcon />
