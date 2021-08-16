@@ -23,10 +23,10 @@ export function CharacterCard({name, gender, birthYear, eyeColor, hairColor, hei
                 </Grid>
             </Grid>
             <Grid container>
-                <Grid item xs={4}>
+                <Grid item xs={6}>
                     <p>Height: {height}cm</p>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={6}>
                     <p>Mass: {mass}kg</p>
                 </Grid>
             </Grid>
@@ -35,13 +35,13 @@ export function CharacterCard({name, gender, birthYear, eyeColor, hairColor, hei
 }
 
 const CharacterCardStyles = styled.div`
-width: 40%;
-height: 100%;
+flex: 0 0 25em;
+
 border-radius: 6px;
 background-color: #346751;
 //#C84B31 is a nice color too
 padding: 15px;
-margin: 50px;
+margin: 30px auto;
 
 .MuiSvgIcon-root{
     vertical-align: middle;
