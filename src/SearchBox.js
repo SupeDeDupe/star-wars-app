@@ -1,10 +1,10 @@
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
 import styled from "styled-components/macro";
 
 export function SearchBox({ searchTerm, onChange }) {
   return (
     <SearchBoxStyles>
-      <SearchIcon/>
+      <SearchIcon />
       <input
         className="search-box-input"
         type="text"
@@ -24,21 +24,21 @@ const SearchBoxStyles = styled.div`
   display: inline-flex;
   align-items: center;
 
-  input{
+  input {
     background-color: #161616;
-    color: #ECDBBA;
-    border: 3px solid rgb(211,211,211, 0.2);
+    color: #ecdbba;
+    border: 3px solid rgb(211, 211, 211, 0.2);
     border-radius: 4px;
     font-size: 30px;
   }
-  input:focus{
-    background-color: rgb(211,211,211, 0.2);
-    border: 1px solid #ECDBBA;
+  input:focus {
+    background-color: rgb(211, 211, 211, 0.2);
+    border: 1px solid #ecdbba;
   }
-  
+
   .MuiSvgIcon-root {
     font-size: 30px;
-    color: rgb(211,211,211);
+    color: rgb(211, 211, 211);
     margin: 0 10px;
   }
 `;

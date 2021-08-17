@@ -3,9 +3,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-export function CharacterCard({
-  person
-}) {
+export function CharacterCard({ person }) {
   return (
     <CharacterCardStyles>
       <header>{person.name}</header>
@@ -44,7 +42,7 @@ const CharacterCardStyles = styled.div`
   padding: 15px;
   margin: 30px auto;
 
-  header{
+  header {
     font-size: 35px;
   }
 

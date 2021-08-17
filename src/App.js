@@ -30,13 +30,12 @@ function App() {
       <div className="character-card-container">
         {data ? (
           people.map((person) => (
-            <CharacterCard
-              key={person.name}
-              person={person}
-            />
+            <CharacterCard key={person.name} person={person} />
           ))
         ) : loading ? (
           <div>loading characters...</div>
+        ) : error ? (
+          <div>Oops there seems to be an error!</div>
         ) : (
           <div>I guess the data just isn't coming 🤷</div>
         )}
@@ -50,13 +49,13 @@ export default App;
 const AppStyles = styled.div`
   text-align: center;
   align-items: center;
-  color: #ECDBBA;
+  color: #ecdbba;
 
-  h1{
+  h1 {
     font-size: 50px;
   }
 
-  .app-title-container{
+  .app-title-container {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -66,7 +65,7 @@ const AppStyles = styled.div`
     margin: 50px;
   }
 
-  .character-card-container{
+  .character-card-container {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
