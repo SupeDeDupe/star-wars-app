@@ -1,9 +1,9 @@
 import { useQuery } from "@apollo/client";
 import { useState } from "react";
-import "./App.css";
 import { CharacterCard } from "./CharacterCard";
 import { GET_CHARACTERS } from "./GraphQL";
 import { SearchBox } from "./SearchBox";
+import styled from "styled-components/macro";
 
 function App() {
   const { loading, error, data } = useQuery(GET_CHARACTERS);
@@ -21,7 +21,7 @@ function App() {
     : data?.allPeople?.people;
 
   return (
-    <div className="App">
+    <AppStyles>
       <div className="app-title-container">
         <h1 style={{ margin: "auto" }}>Star Wars Characters 🚀</h1>
         <SearchBox searchTerm={searchTerm} onChange={handleSearchTermChange} />
@@ -49,8 +49,35 @@ function App() {
           <div>I guess the data just isn't coming 🤷</div>
         )}
       </div>
-    </div>
+    </AppStyles>
   );
 }
 
 export default App;
+
+const AppStyles = styled.div`
+  text-align: center;
+  align-items: center;
+  color: #ECDBBA;
+
+  h1{
+    font-size: 50px;
+  }
+
+  .app-title-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 50px;
+  }
+
+  .character-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+  }
+`;

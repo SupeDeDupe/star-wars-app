@@ -43,7 +43,8 @@ export function CharacterCard({
 }
 
 const CharacterCardStyles = styled.div`
-  flex: 0 0 25em;
+  flex: 0 0 20em;
+  font-size: 25px;
 
   border-radius: 6px;
   background-color: #346751;
@@ -51,11 +52,15 @@ const CharacterCardStyles = styled.div`
   padding: 15px;
   margin: 30px auto;
 
+  header{
+    font-size: 35px;
+  }
+  
   .MuiSvgIcon-root {
     vertical-align: middle;
   }
   .MuiTypography-root {
-    font-size: 20px;
+    font-size: 25px;
     vertical-align: middle;
   }
 `;
