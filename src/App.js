@@ -32,15 +32,7 @@ function App() {
           people.map((person) => (
             <CharacterCard
               key={person.name}
-              name={person.name}
-              gender={person.gender}
-              birthYear={person.birthYear}
-              species={person.species ? person.species.name : "Human"}
-              homeworld={person.homeworld.name}
-              hairColor={person.hairColor}
-              eyeColor={person.eyeColor}
-              height={person.height}
-              mass={person.mass}
+              person={person}
             />
           ))
         ) : loading ? (
