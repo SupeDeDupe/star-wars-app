@@ -7,11 +7,9 @@ import styled from "styled-components/macro";
 
 function App() {
   const { loading, error, data } = useQuery(GET_CHARACTERS);
-  console.log(data);
 
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearchTermChange = (e) => {
-    console.log(e);
     setSearchTerm(e.target.value);
   };
   const people = searchTerm
