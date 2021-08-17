@@ -1,11 +1,22 @@
 import SearchIcon from "@material-ui/icons/Search";
+import { IconButton } from '@material-ui/core';
 import styled from "styled-components/macro";
+import { useRef } from "react";
 
 export function SearchBox({ searchTerm, onChange }) {
+  const inputRef = useRef(null);
+  const handleClick = (e) => {
+    inputRef.current.focus();
+  }
+
   return (
     <SearchBoxStyles>
-      <SearchIcon />
+      <IconButton onClick={handleClick}>
+        <SearchIcon />
+      </IconButton>
+      
       <input
+        ref={inputRef}
         className="search-box-input"
         type="text"
         placeholder="Search"
@@ -39,6 +50,5 @@ const SearchBoxStyles = styled.div`
   .MuiSvgIcon-root {
     font-size: 30px;
     color: rgb(211, 211, 211);
-    margin: 0 10px;
   }
 `;
