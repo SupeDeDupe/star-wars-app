@@ -2,6 +2,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import { IconButton } from '@material-ui/core';
 import styled from "styled-components/macro";
 import { useRef } from "react";
+import PropTypes from "prop-types";
 
 export function SearchBox({ searchTerm, onChange }) {
   const inputRef = useRef(null);
@@ -25,6 +26,11 @@ export function SearchBox({ searchTerm, onChange }) {
       />
     </SearchBoxStyles>
   );
+}
+
+SearchBox.propTypes = {
+  searchTerm: PropTypes.string,
+  onChange: PropTypes.func
 }
 
 const SearchBoxStyles = styled.div`

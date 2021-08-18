@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import PropTypes from "prop-types";
 
 export function CharacterCard({ person }) {
   return (
@@ -30,6 +31,20 @@ export function CharacterCard({ person }) {
       </Grid>
     </CharacterCardStyles>
   );
+}
+
+CharacterCard.propTypes = {
+  person: PropTypes.shape({
+    name: PropTypes.string,
+    gender: PropTypes.string,
+    birthYear: PropTypes.string,
+    species: PropTypes.shape({name: PropTypes.string}),
+    homeworld: PropTypes.shape({name: PropTypes.string}),
+    hairColor: PropTypes.string,
+    eyeColor: PropTypes.string,
+    height: PropTypes.number,
+    mass: PropTypes.number,
+  })
 }
 
 const CharacterCardStyles = styled.div`
